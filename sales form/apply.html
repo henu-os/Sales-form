@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Now – Sales Careers – HENU OS Private Limited</title>
+  <meta name="description"
+    content="Apply online for the Sales Executive role at HENU OS Private Limited. Fill the form, schedule your interview, and upload your CV.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ========================================================
+       APPLY PAGE — HERO SECTION
+    ======================================================== */
+    .apply-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 50px 20px 30px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .apply-hero-text {
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .apply-hero-text .badge {
+      margin-bottom: 12px;
+    }
+
+    /* Fixed full-screen background watermark */
+    .emcard-bg-watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90vw;
+      height: 90vh;
+      max-width: 1100px;
+      object-fit: contain;
+      opacity: 0.13;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      .apply-hero {
+        padding: 30px 16px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Full-screen background watermark -->
+  <img src="emcard.png" class="emcard-bg-watermark" alt="">
+
+  <!-- ===== CENTERED HEADER ===== -->
+  <header>
+    <div class="nav-container">
+
+      <a href="index.html" class="header-brand">
+        <img src="henu.png" alt="HENU OS Logo" class="nav-logo">
+        <div class="brand-text">
+          <span class="brand-title">HENU OS</span>
+          <span class="brand-subtitle">Private Limited</span>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </a>
+
+      <div class="header-divider"></div>
+
+      <nav class="header-nav" id="headerNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="details.html">Job Details</a></li>
+          <li><a href="apply.html" class="active">Apply Now</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="apply.html" class="nav-cta">Apply Now &rarr;</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- ===== HERO SECTION ===== -->
+    <div class="apply-hero">
+      <div class="apply-hero-text">
+        <span class="badge urgent">
+          <i class="fa-solid fa-bolt-lightning"></i> 5 Seats Remaining
+        </span>
+        <span class="fancy-title">Join The Team</span>
+        <h1 class="main-title" style="margin-bottom: 14px; text-align: center;">Application Intake Portal</h1>
+        <p style="font-size: 1.05rem; line-height: 1.8; text-align: center;">
+          Fill out the form below to apply for the <strong>Business Development Executive</strong>
+          position at HENU OS Private Limited. Make sure all details are accurate — our HR team will
+          reach you directly by phone.
+        </p>
+      </div>
+    </div>
+
+    <!-- ===== THE FORM ===== -->
+    <div class="glass-card" style="max-width: 900px; margin: 0 auto;">
+
+      <form id="recruitmentForm" novalidate>
+
+        <!-- Section 1: Basic Info -->
+        <h2 class="section-title"><i class="fa-solid fa-user"></i> 1. Personal Details</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+            <span class="error-msg" id="nameError" style="display:none;"><i class="fa-solid fa-circle-exclamation"></i>
+              Please enter your name.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="emailId">Email Address <span class="required">*</span></label>
+            <input type="email" id="emailId" class="form-control" placeholder="e.g. rahul@gmail.com" required>
+            <span class="error-msg" id="emailError" style="display:none;"><i class="fa-solid fa-circle-exclamation"></i>
+              Please enter a valid email address.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="phoneNo">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phoneNo" class="form-control" placeholder="e.g. 9876543210" required>
+            <span class="error-msg" id="phoneError" style="display:none;"><i class="fa-solid fa-circle-exclamation"></i>
+              Please enter a valid 10-digit number.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="livingLocation">Current Area of Residence <span class="required">*</span></label>
+            <input type="text" id="livingLocation" class="form-control" placeholder="e.g. Narol, Ahmedabad" required>
+            <span class="error-msg" id="locationError" style="display:none;"><i
+                class="fa-solid fa-circle-exclamation"></i> Please enter your current location.</span>
+          </div>
+
+          <div class="form-group full-width">
+            <label>Are you able to work In-Person from Narol, Ahmedabad? <span class="required">*</span></label>
+            <div class="radio-options">
+              <div class="radio-pill">
+                <input type="radio" name="inPerson" id="inPersonYes" value="Yes" checked>
+                <label for="inPersonYes">Yes, I am comfortable</label>
+              </div>
+              <div class="radio-pill">
+                <input type="radio" name="inPerson" id="inPersonNo" value="No">
+                <label for="inPersonNo">No, I prefer remote work</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Checklists / Skill Assessment -->
+        <h2 class="section-title"><i class="fa-solid fa-award"></i> 2. Skillsets &amp; Knowledge</h2>
+
+        <!-- Check 1: Sales Knowledge -->
+        <div class="form-group" style="margin-bottom: 25px;">
+          <label>Sales Knowledge <span class="required">*</span></label>
+          <div class="validation-hint">Please select at least <strong>4</strong> items you know:</div>
+          <div class="checklist-container" id="salesKnowledgeGroup">
+            <label class="checklist-item"><input type="checkbox" value="Sales"><span
+                class="checklist-label">Sales</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Business Development"><span
+                class="checklist-label">Business Development</span></label>
+            <label class="checklist-item"><input type="checkbox" value="B2B Sales"><span class="checklist-label">B2B
+                Sales</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Inside Sales"><span
+                class="checklist-label">Inside Sales</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Direct Sales"><span
+                class="checklist-label">Direct Sales</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Lead Generation"><span
+                class="checklist-label">Lead Generation</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Customer Relationship Management (CRM)"><span
+                class="checklist-label">Customer Relationship Management (CRM)</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Sales Management"><span
+                class="checklist-label">Sales Management</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Account Management"><span
+                class="checklist-label">Account Management</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Negotiation"><span
+                class="checklist-label">Negotiation</span></label>
+          </div>
+          <span class="error-msg" id="salesCheckError" style="display:none;"><i
+              class="fa-solid fa-circle-exclamation"></i> Select at least 4 sales options.</span>
+        </div>
+
+        <!-- Check 2: Technology Knowledge -->
+        <div class="form-group" style="margin-bottom: 25px;">
+          <label>Technology Knowledge <span class="required">*</span></label>
+          <div class="validation-hint">Please select at least <strong>3</strong> areas of familiarity:</div>
+          <div class="checklist-container" id="techKnowledgeGroup">
+            <label class="checklist-item"><input type="checkbox" value="Artificial Intelligence"><span
+                class="checklist-label">Artificial Intelligence</span></label>
+            <label class="checklist-item"><input type="checkbox" value="ChatGPT"><span
+                class="checklist-label">ChatGPT</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Software Development"><span
+                class="checklist-label">Software Development</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Website Development"><span
+                class="checklist-label">Website Development</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Digital Marketing"><span
+                class="checklist-label">Digital Marketing</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Search Engine Optimization (SEO)"><span
+                class="checklist-label">Search Engine Optimization (SEO)</span></label>
+            <label class="checklist-item"><input type="checkbox" value="WordPress"><span
+                class="checklist-label">WordPress</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Customer Relationship Management"><span
+                class="checklist-label">Customer Relationship Management</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Cloud Computing"><span
+                class="checklist-label">Cloud Computing</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Information Technology"><span
+                class="checklist-label">Information Technology</span></label>
+          </div>
+          <span class="error-msg" id="techCheckError" style="display:none;"><i
+              class="fa-solid fa-circle-exclamation"></i> Select at least 3 tech options.</span>
+        </div>
+
+        <!-- Check 3: Professional Tools -->
+        <div class="form-group" style="margin-bottom: 25px;">
+          <label>Professional Tools &amp; Software <span class="required">*</span></label>
+          <div class="validation-hint">Please select at least <strong>3</strong> tools you are confident using:</div>
+          <div class="checklist-container" id="toolsGroup">
+            <label class="checklist-item"><input type="checkbox" value="LinkedIn"><span
+                class="checklist-label">LinkedIn</span></label>
+            <label class="checklist-item"><input type="checkbox" value="HENU CRM"><span class="checklist-label">HENU
+                CRM</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Microsoft Excel"><span
+                class="checklist-label">Microsoft Excel</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Google Workspace"><span
+                class="checklist-label">Google Workspace</span></label>
+            <label class="checklist-item"><input type="checkbox" value="HubSpot"><span
+                class="checklist-label">HubSpot</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Zoho CRM"><span class="checklist-label">Zoho
+                CRM</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Salesforce"><span
+                class="checklist-label">Salesforce</span></label>
+            <label class="checklist-item"><input type="checkbox" value="WhatsApp Business"><span
+                class="checklist-label">WhatsApp Business</span></label>
+          </div>
+          <span class="error-msg" id="toolsCheckError" style="display:none;"><i
+              class="fa-solid fa-circle-exclamation"></i> Select at least 3 tools.</span>
+        </div>
+
+        <!-- Check 4: Mandatory Skills -->
+        <div class="form-group" style="margin-bottom: 25px;">
+          <label>Mandatory Skills Declaration <span class="required">*</span></label>
+          <div class="validation-hint">Tick all options to confirm you meet the criteria:</div>
+          <div class="checklist-container" id="mandatorySkillsGroup">
+            <label class="checklist-item"><input type="checkbox" value="Excellent Hindi communication skills"><span
+                class="checklist-label">Excellent Hindi communication skills</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Basic spoken and written English"><span
+                class="checklist-label">Basic spoken and written English</span></label>
+            <label class="checklist-item"><input type="checkbox"
+                value="Strong confidence while speaking with business owners"><span class="checklist-label">Strong
+                confidence while speaking with business owners</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Lead Generation"><span
+                class="checklist-label">Lead Generation</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Cold Calling"><span class="checklist-label">Cold
+                Calling</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Follow-up Skills"><span
+                class="checklist-label">Follow-up Skills</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Negotiation Skills"><span
+                class="checklist-label">Negotiation Skills</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Client Relationship Management"><span
+                class="checklist-label">Client Relationship Management</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Presentation Skills"><span
+                class="checklist-label">Presentation Skills</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Sales Closing Mindset"><span
+                class="checklist-label">Sales Closing Mindset</span></label>
+            <label class="checklist-item"><input type="checkbox" value="Target-Oriented Attitude"><span
+                class="checklist-label">Target-Oriented Attitude</span></label>
+          </div>
+          <span class="error-msg" id="mandatoryCheckError" style="display:none;"><i
+              class="fa-solid fa-circle-exclamation"></i> You must confirm all mandatory criteria before
+            proceeding.</span>
+        </div>
+
+        <!-- Section 3: Extra Questions -->
+        <h2 class="section-title"><i class="fa-solid fa-circle-question"></i> 3. Additional Questions</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="altMobile">Alternative Mobile Number</label>
+            <input type="tel" id="altMobile" class="form-control" placeholder="e.g. 9999988888">
+          </div>
+
+          <div class="form-group">
+            <label for="currentCity">Current City <span class="required">*</span></label>
+            <input type="text" id="currentCity" class="form-control" placeholder="e.g. Ahmedabad" required>
+            <span class="error-msg" id="cityError" style="display:none;"><i class="fa-solid fa-circle-exclamation"></i>
+              Please write your current city.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="qualification">Highest Educational Qualification <span class="required">*</span></label>
+            <input type="text" id="qualification" class="form-control" placeholder="e.g. BBA, MBA, 12th Pass" required>
+            <span class="error-msg" id="qualificationError" style="display:none;"><i
+                class="fa-solid fa-circle-exclamation"></i> Please state your qualification.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="salesExperience">Total Sales Experience <span class="required">*</span></label>
+            <select id="salesExperience" class="form-control" required>
+              <option value="" disabled selected>-- Select Experience --</option>
+              <option value="Fresher (No Experience)">Fresher (No Experience)</option>
+              <option value="Under 6 Months">Under 6 Months</option>
+              <option value="6 Months to 1 Year">6 Months to 1 Year</option>
+              <option value="1 to 2 Years">1 to 2 Years</option>
+              <option value="2 to 3 Years">2 to 3 Years</option>
+              <option value="3+ Years">3+ Years</option>
+            </select>
+            <span class="error-msg" id="experienceError" style="display:none;"><i
+                class="fa-solid fa-circle-exclamation"></i> Please select your sales experience level.</span>
+          </div>
+
+          <div class="form-group">
+            <label>Worked in B2B Sales Before? <span class="required">*</span></label>
+            <div class="radio-options">
+              <div class="radio-pill"><input type="radio" name="workedB2b" id="b2bYes" value="Yes"><label
+                  for="b2bYes">Yes</label></div>
+              <div class="radio-pill"><input type="radio" name="workedB2b" id="b2bNo" value="No" checked><label
+                  for="b2bNo">No</label></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Comfortable with Cold Calling? <span class="required">*</span></label>
+            <div class="radio-options">
+              <div class="radio-pill"><input type="radio" name="coldCalling" id="coldYes" value="Yes" checked><label
+                  for="coldYes">Yes</label></div>
+              <div class="radio-pill"><input type="radio" name="coldCalling" id="coldNo" value="No"><label
+                  for="coldNo">No</label></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Work Full-Time from Ahmedabad Office? <span class="required">*</span></label>
+            <div class="radio-options">
+              <div class="radio-pill"><input type="radio" name="fullTimeOffice" id="fullTimeYes" value="Yes"
+                  checked><label for="fullTimeYes">Yes</label></div>
+              <div class="radio-pill"><input type="radio" name="fullTimeOffice" id="fullTimeNo" value="No"><label
+                  for="fullTimeNo">No</label></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>How soon can you join? <span class="required">*</span></label>
+            <div class="radio-options">
+              <div class="radio-pill"><input type="radio" name="joinTime" id="joinImmediate" value="Immediately"
+                  checked><label for="joinImmediate">Immediately</label></div>
+              <div class="radio-pill"><input type="radio" name="joinTime" id="join7Days" value="Within 7 Days"><label
+                  for="join7Days">Within 7 Days</label></div>
+              <div class="radio-pill"><input type="radio" name="joinTime" id="join15Days" value="Within 15 Days"><label
+                  for="join15Days">Within 15 Days</label></div>
+              <div class="radio-pill"><input type="radio" name="joinTime" id="joinLater" value="Later"><label
+                  for="joinLater">Later</label></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Resume Upload -->
+        <h2 class="section-title"><i class="fa-solid fa-file-arrow-up"></i> 4. Upload Resume (CV)</h2>
+        <div class="form-group">
+          <div class="upload-dropzone" id="dropzone">
+            <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+            <div class="upload-text">
+              Drag and drop your CV here, or <strong>Browse</strong>
+            </div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 5px;">
+              Accepted formats: PDF, PNG, JPEG, JPG (Max 5MB)
+            </div>
+            <input type="file" id="resumeFile" accept=".pdf,.png,.jpeg,.jpg" required>
+          </div>
+          <div class="file-info" id="fileInfo" style="display:none;">
+            <i class="fa-solid fa-circle-check"></i> <span id="fileNameDisplay">file_name.pdf</span> (Ready to upload)
+          </div>
+          <span class="error-msg" id="resumeError" style="display:none;"><i class="fa-solid fa-circle-exclamation"></i>
+            Please upload your resume (CV).</span>
+        </div>
+
+        <!-- Section 5: Calendar Slots -->
+        <h2 class="section-title"><i class="fa-solid fa-calendar-days"></i> 5. Schedule Your Interview</h2>
+        <p>Select your preferred date and session from the calendar grid below.</p>
+
+        <div class="calendar-wrapper">
+          <div class="calendar-header">June – July 2026</div>
+
+          <div class="calendar-days">
+            <div class="day-tab active" data-date="2026-06-28">
+              <div class="day-name">Sun</div>
+              <div class="day-date">28 Jun</div>
+            </div>
+            <div class="day-tab" data-date="2026-06-29">
+              <div class="day-name">Mon</div>
+              <div class="day-date">29 Jun</div>
+            </div>
+            <div class="day-tab" data-date="2026-06-30">
+              <div class="day-name">Tue</div>
+              <div class="day-date">30 Jun</div>
+            </div>
+            <div class="day-tab" data-date="2026-07-01">
+              <div class="day-name">Wed</div>
+              <div class="day-date">01 Jul</div>
+            </div>
+          </div>
+
+          <div class="slots-grid" id="slotsGrid">
+            <!-- Dynamically populated via script.js -->
+          </div>
+
+          <div class="slot-legend">
+            <div class="legend-item"><span class="legend-color available"></span> Available</div>
+            <div class="legend-item"><span class="legend-color booked"></span> Booked / Scheduled</div>
+            <div class="legend-item"><span class="legend-color selected"></span> Selected Slot</div>
+          </div>
+
+          <div class="custom-slot-toggle">
+            <label class="checklist-item" style="justify-content: center; display: inline-flex;">
+              <input type="checkbox" id="customSlotCheckbox">
+              <span class="checklist-label" style="font-weight: 600;">None of these slots suit me – let me write a
+                custom slot</span>
+            </label>
+          </div>
+
+          <div class="custom-slot-box" id="customSlotBox" style="display: none;">
+            <div>
+              <label for="customDateInput" style="display:block; margin-bottom:5px;">Select Date</label>
+              <input type="date" id="customDateInput" min="2026-06-27">
+            </div>
+            <div>
+              <label for="customTimeInput" style="display:block; margin-bottom:5px;">Select Start Time</label>
+              <input type="time" id="customTimeInput">
+            </div>
+            <div style="font-size:0.8rem; color:var(--text-muted); display:flex; align-items:center; margin-top:28px;">
+              * Will automatically schedule a 45-minute interview block.
+            </div>
+          </div>
+        </div>
+        <span class="error-msg" id="slotError" style="display:none; text-align:center; justify-content:center;"><i
+            class="fa-solid fa-circle-exclamation"></i> Please select an interview slot or write a custom one.</span>
+
+        <!-- Hidden fields -->
+        <input type="hidden" id="selectedDate" name="selectedDate" value="2026-06-28">
+        <input type="hidden" id="selectedTime" name="selectedTime" value="">
+
+        <!-- Submit -->
+        <div style="margin-top: 40px;">
+          <button type="submit" id="submitBtn" class="btn btn-primary"
+            style="width: 100%; padding: 18px; font-size: 1.1rem; justify-content: center;">
+            Submit Application <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Spinner Loading Overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Submitting your application to Google Sheet...</div>
+  </div>
+
+  <!-- Thank You Overlay -->
+  <div class="thankyou-overlay" id="thankYouOverlay">
+    <div class="glass-card thankyou-card">
+      <i class="fa-solid fa-circle-check ty-success-icon"></i>
+      <h2 class="fancy-title">Thank You!</h2>
+      <h3 class="main-title" style="font-size: 1.8rem; margin-bottom: 15px;">Application Submitted Successfully!</h3>
+      <p>
+        Thank you for applying to <strong>HENU OS Private Limited</strong>. Our HR team will review your application.
+        If your profile matches our requirements, we will contact you by phone or WhatsApp to schedule your interview.
+      </p>
+      <div class="ty-contact-box">
+        <h4>HR Direct Coordinates</h4>
+        <p><i class="fa-solid fa-envelope"></i> hr.henuos@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> +91 80941 00513</p>
+        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +91 80941 00513</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:15px; align-items:center;">
+        <a href="#" id="whatsappDirectBtn" class="btn btn-whatsapp" target="_blank">
+          Message HR on WhatsApp <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="index.html" class="btn btn-secondary">Return to Careers Home</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <span style="font-family:var(--font-title); font-weight:800; color:var(--text-dark); font-size:1.2rem;">HENU
+          OS</span>
+        <span
+          style="display:block; font-family:var(--font-fancy); color:var(--accent); font-size:1.5rem; margin-top:-4px;">Private
+          Limited</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://henuos.netlify.app/" target="_blank">HENU OS Website</a></li>
+        <li><a href="https://henuos-services.netlify.app/" target="_blank">Services Portal</a></li>
+        <li><a href="contact.html">Help &amp; FAQ</a></li>
+        <li><a href="contact.html">Terms &amp; Conditions</a></li>
+      </ul>
+      <div class="footer-copy">
+        &copy; 2026 HENU OS Private Limited. All rights reserved. Ahmedabad, Gujarat, India.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Details – Sales Executive – HENU OS Private Limited</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ---- Page-level overrides for details.html ---- */
+
+    /* emcard belt: right-edge strip, 70 % opacity, belt touches screen edge */
+
+
+    /* SARDU: standing at bottom-right */
+    .sardu-fixed {
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      z-index: 130;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      pointer-events: none;
+    }
+
+    .sardu-speech {
+      margin-right: 10px;
+      margin-bottom: 8px;
+      background: #ffffff;
+      border: 1.5px solid #FF9CB5;
+      border-radius: 16px 16px 4px 16px;
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      color: #5a2035;
+      max-width: 210px;
+      box-shadow: 0 4px 20px rgba(252, 128, 159, 0.18);
+      pointer-events: all;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.45;
+      animation: floatBubble 3.5s ease-in-out infinite;
+    }
+
+    @keyframes floatBubble {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    .sardu-standing {
+      width: 150px;
+      object-fit: contain;
+      display: block;
+      pointer-events: all;
+      animation: sardRock 3s ease-in-out infinite;
+      filter: drop-shadow(0 4px 12px rgba(252, 128, 159, 0.30));
+    }
+
+    @keyframes sardRock {
+
+      0%,
+      100% {
+        transform: rotate(-2deg);
+      }
+
+      50% {
+        transform: rotate(2deg);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .sardu-fixed {
+        right: 5px;
+      }
+
+      .sardu-fixed {
+        right: 5px;
+      }
+
+      .sardu-speech {
+        display: none;
+      }
+
+      .sardu-standing {
+        width: 90px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ===== SARDU – standing on right ===== -->
+  <div class="sardu-fixed">
+    <div class="sardu-speech">
+      "Hi! I'm <strong>Sardu</strong>, your HENU OS guide.<br>
+      Only <strong>5 seats</strong> left — apply before they fill up! 🚀"
+    </div>
+    <img src="SARDU.png" alt="Sardu – HENU OS Brand Representative" class="sardu-standing">
+  </div>
+
+  <!-- ===== CENTERED HEADER ===== -->
+  <header>
+    <div class="nav-container">
+
+      <a href="index.html" class="header-brand">
+        <img src="henu.png" alt="HENU OS Logo" class="nav-logo">
+        <div class="brand-text">
+          <span class="brand-title">HENU OS</span>
+          <span class="brand-subtitle">Private Limited</span>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </a>
+
+      <div class="header-divider"></div>
+
+      <nav class="header-nav" id="headerNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="details.html" class="active">Job Details</a></li>
+          <li><a href="apply.html">Apply Now</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="apply.html" class="nav-cta">Apply Now &rarr;</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <div class="fancy-title" style="text-align:center;">Join Our Sales Elite</div>
+    <h1 class="main-title" style="text-align:center; margin-bottom:44px;">Career Documentation & Details</h1>
+
+    <!-- Job Overview -->
+    <div class="glass-card">
+      <span class="badge urgent" style="margin-bottom:14px;">
+        <i class="fa-solid fa-bolt-lightning"></i> Urgent Opening
+      </span>
+      <h2
+        style="font-family:var(--font-title); font-size:1.9rem; font-weight:800; color:var(--accent); margin-bottom:10px;">
+        Business Development Executive (B2B IT Sales)
+      </h2>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin:14px 0 22px;">
+        <span class="badge"><i class="fa-solid fa-building"></i> Work from Office</span>
+        <span class="badge"><i class="fa-solid fa-location-dot"></i> Narol, Ahmedabad</span>
+        <span class="badge"><i class="fa-solid fa-user-tie"></i> 0–3 Years Experience</span>
+        <span class="badge"><i class="fa-solid fa-users"></i> 5 Openings Total</span>
+      </div>
+
+      <p>
+        HENU OS Private Limited is hiring self-motivated <strong>Business Development Executives</strong>
+        to drive our B2B IT Sales engine. You will connect with business owners across India,
+        generate qualified leads, and present our high-value technology & AI automation solutions.
+      </p>
+    </div>
+
+    <!-- Salary -->
+    <div class="glass-card">
+      <h2 class="section-title"><i class="fa-solid fa-indian-rupee-sign"></i> Salary & Compensation</h2>
+      <p>Competitive package divided into probation and high-performance incentive tiers.</p>
+
+      <div class="salary-boxes">
+        <div class="salary-box">
+          <h4>Probation (3 Months)</h4>
+          <div class="salary-value">₹7,000 – ₹16,000</div>
+          <p class="salary-desc">Fixed Monthly (Freshers)</p>
+        </div>
+        <div class="salary-box">
+          <h4>After Probation (Annual CTC)</h4>
+          <div class="salary-value">₹2,60,000 – ₹7,20,000</div>
+          <p class="salary-desc">Fixed ₹1.92L–₹3L + Variable ₹60K–₹4.2L / year</p>
+        </div>
+      </div>
+
+      <div
+        style="background:var(--pink-primary); border:1.5px solid var(--border-color); border-radius:14px; padding:18px; margin-top:8px;">
+        <p style="margin-bottom:10px; font-weight:700; color:var(--accent);">
+          <i class="fa-solid fa-gift" style="margin-right:8px;"></i> Exceptional Incentive Structure
+        </p>
+        <ul class="info-bullets" style="margin-bottom:0;">
+          <li><i class="fa-solid fa-circle-check"></i> <strong>3%–7%</strong> performance-based commission on every
+            successful project.</li>
+          <li><i class="fa-solid fa-circle-check"></i> High performers can earn up to <strong>₹3,75,000+ /
+              month</strong> in incentives.</li>
+          <li><i class="fa-solid fa-circle-check"></i> Absolutely <strong>no upper cap</strong> on variable commissions.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="glass-card">
+      <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Daily Responsibilities & KPIs</h2>
+      <ul class="info-bullets" style="margin-bottom:22px;">
+        <li><i class="fa-solid fa-chevron-right"></i> Identify decision-makers via LinkedIn, Google, IndiaMART,
+          Justdial, and WhatsApp.</li>
+        <li><i class="fa-solid fa-chevron-right"></i> Cold call prospects, explain services, follow up until closure.
+        </li>
+        <li><i class="fa-solid fa-chevron-right"></i> Coordinate with tech division to draft tailored proposals &
+          quotations.</li>
+      </ul>
+
+      <p style="font-weight:700; color:var(--accent); text-transform:uppercase; font-size:0.82rem; letter-spacing:1px;">
+        Daily KPI Targets
+      </p>
+      <div class="kpi-cards">
+        <div class="kpi-card">
+          <div class="kpi-val">100</div>
+          <div class="kpi-lbl">Cold Calls</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">50</div>
+          <div class="kpi-lbl">WhatsApp</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">30</div>
+          <div class="kpi-lbl">Emails</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">20</div>
+          <div class="kpi-lbl">LinkedIn</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">10</div>
+          <div class="kpi-lbl">Qualified Leads</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">2</div>
+          <div class="kpi-lbl">Meetings</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">1</div>
+          <div class="kpi-lbl">Proposal</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Requirements -->
+    <div class="glass-card">
+      <h2 class="section-title"><i class="fa-solid fa-circle-info"></i> Candidate Requirements</h2>
+      <ul class="info-bullets">
+        <li><i class="fa-solid fa-check"></i> <strong>Education:</strong> 12th Pass or above. Freshers with strong
+          communication are welcome.</li>
+        <li><i class="fa-solid fa-check"></i> <strong>Age & Gender:</strong> 20–32 years. All genders welcome.</li>
+        <li><i class="fa-solid fa-check"></i> <strong>Languages:</strong> Fluent Hindi + basic spoken/written English.
+        </li>
+        <li><i class="fa-solid fa-check"></i> <strong>Work Mode:</strong> Full-Time from our Narol, Ahmedabad office.
+          Monday–Saturday.</li>
+        <li><i class="fa-solid fa-check"></i> <strong>Shift:</strong> 10:15 AM – 7:00 PM (Sunday off).</li>
+        <li><i class="fa-solid fa-check"></i> <strong>Computer Skills:</strong> LinkedIn, MS Excel / Google Sheets,
+          internet research, basic ChatGPT, WhatsApp Business.</li>
+      </ul>
+    </div>
+
+    <div style="text-align:center; margin-top:30px; margin-bottom:20px;">
+      <a href="apply.html" class="btn btn-primary" style="padding:18px 50px; font-size:1.05rem;">
+        Proceed to Application <i class="fa-solid fa-arrow-right-to-bracket"></i>
+      </a>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <span style="font-family:var(--font-title); font-weight:800; color:var(--text-dark); font-size:1.2rem;">HENU
+          OS</span>
+        <span
+          style="display:block; font-family:var(--font-fancy); color:var(--accent); font-size:1.5rem; margin-top:-4px;">Private
+          Limited</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://henuos.netlify.app/" target="_blank">HENU OS Website</a></li>
+        <li><a href="https://henuos-services.netlify.app/" target="_blank">Services Portal</a></li>
+        <li><a href="contact.html">Help & FAQ</a></li>
+        <li><a href="contact.html">Terms & Conditions</a></li>
+      </ul>
+      <div class="footer-copy">
+        &copy; 2026 HENU OS Private Limited. All rights reserved. Ahmedabad, Gujarat, India.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HENU OS Private Limited – Sales Careers</title>
+  <meta name="description" content="Join HENU OS Private Limited as a Business Development Executive. B2B IT Sales, AI automation and digital marketing services. Apply now in Ahmedabad.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* ============================================================
+       HOME PAGE – SARDU HERO LAYOUT
+    ============================================================ */
+    .hero-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 48px;
+      padding: 60px 0 0;
+      position: relative;
+    }
+
+    .hero-left {
+      flex: 1 1 auto; min-width: 0;
+      padding-bottom: 30px;
+      display: flex; flex-direction: column; align-items: flex-start;
+    }
+
+    .hero-left .badge { margin-bottom: 18px; }
+    .hero-left .fancy-title { text-align: left; margin-bottom: 2px; }
+    .hero-left .main-title  { text-align: left; margin-bottom: 20px; }
+    .hero-left p { font-size: 1.05rem; line-height: 1.85; max-width: 560px; margin-bottom: 28px; }
+
+    .hero-cta-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+
+    .hero-sardu-wrap {
+      flex: 0 0 auto; width: 300px;
+      display: flex; align-items: flex-end; justify-content: center; position: relative;
+    }
+
+    .sardu-home-img {
+      width: 100%; max-width: 300px; display: block; object-fit: contain;
+      animation: sardFloat 4s ease-in-out infinite;
+      filter: drop-shadow(-3px 0 8px rgba(252,128,159,0.18)) drop-shadow(3px 0 8px rgba(252,128,159,0.18)) drop-shadow(0 18px 30px rgba(252,128,159,0.25));
+    }
+
+    @keyframes sardFloat {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    .sardu-shadow-ring {
+      position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%);
+      width: 160px; height: 18px;
+      background: radial-gradient(ellipse, rgba(252,128,159,0.30) 0%, transparent 70%);
+      border-radius: 50%; animation: ringPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes ringPulse {
+      0%, 100% { opacity: 0.6; transform: translateX(-50%) scaleX(1); }
+      50%       { opacity: 0.25; transform: translateX(-50%) scaleX(0.8); }
+    }
+
+    /* Stats strip */
+    .hero-stats {
+      display: flex; gap: 0;
+      border: 1.5px solid var(--border-color); border-radius: 20px;
+      overflow: hidden; margin-top: 40px; background: #fff;
+    }
+
+    .stat-item {
+      flex: 1; padding: 20px 18px; text-align: center;
+      border-right: 1.5px solid var(--border-color); transition: var(--transition);
+    }
+
+    .stat-item:last-child { border-right: none; }
+    .stat-item:hover { background: var(--pink-primary); }
+
+    .stat-val { font-family: var(--font-title); font-size: 1.7rem; font-weight: 800; color: var(--accent); display: block; }
+    .stat-lbl { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 3px; }
+
+    @media (max-width: 900px) {
+      .hero-row { flex-direction: column; align-items: center; padding: 40px 0 0; gap: 0; }
+      .hero-left { align-items: center; text-align: center; padding-bottom: 10px; }
+      .hero-left .fancy-title, .hero-left .main-title { text-align: center; }
+      .hero-left p { text-align: center; max-width: 100%; }
+      .hero-cta-row { justify-content: center; }
+      .hero-sardu-wrap { width: 200px; order: -1; }
+      .hero-stats { flex-wrap: wrap; border-radius: 16px; }
+      .stat-item { min-width: 45%; border-bottom: 1.5px solid var(--border-color); }
+    }
+
+    @media (max-width: 480px) {
+      .hero-sardu-wrap { width: 160px; }
+      .stat-val { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== CENTERED HEADER ===== -->
+  <header>
+    <div class="nav-container">
+
+      <!-- TOP: Centered Logo + Brand Name -->
+      <a href="index.html" class="header-brand">
+        <img src="henu.png" alt="HENU OS Logo" class="nav-logo">
+        <div class="brand-text">
+          <span class="brand-title">HENU OS</span>
+          <span class="brand-subtitle">Private Limited</span>
+        </div>
+        <!-- Hamburger (mobile) -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </a>
+
+      <!-- Divider -->
+      <div class="header-divider"></div>
+
+      <!-- BOTTOM: Nav Links Centered -->
+      <nav class="header-nav" id="headerNav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="details.html">Job Details</a></li>
+          <li><a href="apply.html">Apply Now</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="apply.html" class="nav-cta">Apply Now &rarr;</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- HERO -->
+    <div class="hero-row">
+      <div class="hero-left">
+        <span class="badge urgent">
+          <i class="fa-solid fa-fire-flame-curved"></i> Urgent Hire &mdash; Only 5 Seats Left
+        </span>
+        <span class="fancy-title">Welcome to HENU OS</span>
+        <h1 class="main-title">Shape the Future<br>of Technology Sales</h1>
+        <p>
+          HENU OS Private Limited is building India's next-generation AI-powered software ecosystem.
+          We are hiring energetic <strong>Business Development Executives (B2B IT Sales)</strong>
+          for an immediate start in our Ahmedabad office.
+        </p>
+        <div class="hero-cta-row">
+          <a href="details.html" class="btn btn-primary">Explore Job Details <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="apply.html" class="btn btn-secondary">Apply Directly <i class="fa-solid fa-pen-to-square"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-sardu-wrap">
+        <img src="SARDU.png" alt="Sardu – HENU OS Brand Guide" class="sardu-home-img">
+        <div class="sardu-shadow-ring"></div>
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="hero-stats">
+      <div class="stat-item"><span class="stat-val">5</span><div class="stat-lbl">Open Seats</div></div>
+      <div class="stat-item"><span class="stat-val">₹16K</span><div class="stat-lbl">Starting Salary</div></div>
+      <div class="stat-item"><span class="stat-val">₹3.75L</span><div class="stat-lbl">Max / Month Incentive</div></div>
+      <div class="stat-item"><span class="stat-val">Mon–Sat</span><div class="stat-lbl">Work Days</div></div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="glass-card" style="margin-top: 50px;">
+      <h2 class="section-title"><i class="fa-solid fa-cubes"></i> Our Core Services &amp; Expertise</h2>
+      <p>As a Sales Executive at HENU OS, you will represent a portfolio of premium digital services to business owners, startups, and enterprises across India.</p>
+      <div class="services-grid">
+        <div class="service-card"><div class="service-icon"><i class="fa-solid fa-robot"></i></div><h3>AI Automation</h3><p>Custom chatbots, workflow triggers and LLM-powered business integrations to maximise productivity.</p></div>
+        <div class="service-card"><div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div><h3>Website Development</h3><p>Premium responsive websites, ecommerce platforms and progressive web apps using modern stacks.</p></div>
+        <div class="service-card"><div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div><h3>Custom CRM Solutions</h3><p>Tailored customer relationship management — including HENU CRM — built to scale sales pipelines.</p></div>
+        <div class="service-card"><div class="service-icon"><i class="fa-solid fa-code"></i></div><h3>Custom Software Development</h3><p>Scalable APIs, backend infrastructure, Python integrations and custom database applications.</p></div>
+        <div class="service-card"><div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div><h3>Mobile App Development</h3><p>Native and cross-platform iOS &amp; Android solutions centred on sleek UX design principles.</p></div>
+        <div class="service-card"><div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div><h3>Digital Marketing &amp; SEO</h3><p>Search engine optimisation, lead capture campaigns, content strategy and outreach solutions.</p></div>
+        <div class="service-card"><div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div><h3>Graphic Design &amp; UI/UX</h3><p>Cohesive brand assets, logos, UI layouts and premium presentation materials for businesses.</p></div>
+        <div class="service-card"><div class="service-icon"><i class="fa-solid fa-linux"></i></div><h3>Linux OS Development</h3><p>HENU OS — our flagship product: a secure, developer-friendly Linux-based operating system.</p></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <span style="font-family:var(--font-title); font-weight:800; color:var(--text-dark); font-size:1.2rem;">HENU OS</span>
+        <span style="display:block; font-family:var(--font-fancy); color:var(--accent); font-size:1.5rem; margin-top:-4px;">Private Limited</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://henuos.netlify.app/" target="_blank">HENU OS Website</a></li>
+        <li><a href="https://henuos-services.netlify.app/" target="_blank">Services Portal</a></li>
+        <li><a href="contact.html">Help &amp; FAQ</a></li>
+        <li><a href="contact.html">Terms &amp; Conditions</a></li>
+      </ul>
+      <div class="footer-copy">&copy; 2026 HENU OS Private Limited. All rights reserved. Ahmedabad, Gujarat, India.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
