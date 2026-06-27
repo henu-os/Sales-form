@@ -450,7 +450,7 @@ if (recruitmentForm) {
     if (loadingOverlay) loadingOverlay.classList.add('visible');
 
     // POST to Google Apps Script
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyZ5hfaYpoCHIBrcQv-zkzcliYebk0SWMlhWMZceXvOCWnJmurdTZQeeJU1zs2YBpaE/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx5ibVCb3hF7YDvj5yw2V4Lz4OWGeWBZF9UTWCtaPHABEIUy00bGLCLdd7QXFLZrgTI_w/exec';
 
     fetch(scriptURL, {
       method: 'POST',
